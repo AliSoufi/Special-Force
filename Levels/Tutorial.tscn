@@ -1,0 +1,131 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Items/Key.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Items/Portal.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Levels/finish.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Items/PortalDestination.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Items/KeyBlue.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Environment/EmptyRed.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Environment/EmptyBlue.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Items/KeyRed.tscn" type="PackedScene" id=10]
+[ext_resource path="res://GUI/Minecraft.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://Levels/Tiles.tres" type="TileSet" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 11 )
+
+[node name="Level1" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 8 )]
+
+[node name="GUI" parent="." instance=ExtResource( 9 )]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 12 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 4
+format = 1
+tile_data = PoolIntArray( 852062, 4, 0, 852063, 4, 0, 852064, 4, 0, 852065, 4, 0, 852066, 4, 0, 852067, 4, 0, 852068, 4, 0, 852069, 4, 0, 852070, 4, 0, 852071, 4, 0, 852072, 4, 0, 852073, 4, 0, 852074, 4, 0, 852075, 4, 0, 852076, 4, 0, 852077, 4, 0, 852078, 4, 0, 852079, 4, 0, 852080, 4, 0, 852081, 4, 0, 852082, 4, 0, 917598, 4, 0, 917618, 4, 0, 983134, 4, 0, 983154, 4, 0, 1048670, 4, 0, 1048690, 4, 0, 1114206, 4, 0, 1114226, 4, 0, 1179742, 4, 0, 1179762, 4, 0, 1245277, 4, 0, 1245278, 4, 0, 1245298, 4, 0, 1310813, 4, 0, 1310820, 4, 0, 1310821, 4, 0, 1310822, 4, 0, 1310823, 4, 0, 1310824, 4, 0, 1310825, 4, 0, 1310826, 4, 0, 1310834, 4, 0, 1376349, 4, 0, 1376350, 4, 0, 1376351, 4, 0, 1376352, 4, 0, 1376353, 4, 0, 1376354, 4, 0, 1376355, 4, 0, 1376356, 4, 0, 1376362, 4, 0, 1376370, 4, 0, 1441898, 4, 0, 1441906, 4, 0, 1507434, 4, 0, 1507442, 4, 0, 1572963, 4, 0, 1572964, 4, 0, 1572965, 4, 0, 1572966, 4, 0, 1572967, 4, 0, 1572968, 4, 0, 1572969, 4, 0, 1572970, 4, 0, 1572978, 4, 0, 1638419, 4, 0, 1638499, 4, 0, 1638513, 4, 0, 1638514, 4, 0, 1638515, 4, 0, 1638516, 4, 0, 1638517, 4, 0, 1638518, 4, 0, 1638519, 4, 0, 1638520, 4, 0, 1638521, 4, 0, 1638522, 4, 0, 1638523, 4, 0, 1638524, 4, 0, 1638525, 4, 0, 1638526, 4, 0, 1638527, 4, 0, 1638528, 4, 0, 1638529, 4, 0, 1638530, 4, 0, 1703955, 4, 0, 1704035, 4, 0, 1704036, 4, 0, 1704049, 4, 0, 1704066, 4, 0, 1769491, 4, 0, 1769572, 4, 0, 1769573, 4, 0, 1769574, 4, 0, 1769575, 4, 0, 1769576, 4, 0, 1769577, 4, 0, 1769578, 4, 0, 1769579, 4, 0, 1769585, 4, 0, 1769602, 4, 0, 1835027, 4, 0, 1835121, 4, 0, 1835138, 4, 0, 1900563, 4, 0, 1900564, 4, 0, 1900565, 4, 0, 1900566, 4, 0, 1900567, 4, 0, 1900568, 4, 0, 1900569, 4, 0, 1900570, 4, 0, 1900571, 4, 0, 1900572, 4, 0, 1900573, 4, 0, 1900574, 4, 0, 1900575, 4, 0, 1900579, 4, 0, 1900580, 4, 0, 1900581, 4, 0, 1900582, 4, 0, 1900583, 4, 0, 1900584, 4, 0, 1900585, 4, 0, 1900586, 4, 0, 1900587, 4, 0, 1900588, 4, 0, 1900594, 4, 0, 1900595, 4, 0, 1900596, 4, 0, 1900597, 4, 0, 1900598, 4, 0, 1900599, 4, 0, 1900600, 4, 0, 1900601, 4, 0, 1900602, 4, 0, 1900603, 4, 0, 1900604, 4, 0, 1900605, 4, 0, 1900615, 4, 0, 1900616, 4, 0, 1900617, 4, 0, 1900618, 4, 0, 1900619, 4, 0, 1900620, 4, 0, 1900621, 4, 0, 1900622, 4, 0, 1900623, 4, 0, 1900624, 4, 0, 1900625, 4, 0, 1900626, 4, 0, 1900627, 4, 0, 1900637, 4, 0, 1900638, 4, 0, 1900639, 4, 0, 1900640, 4, 0, 1900641, 4, 0, 1900642, 4, 0, 1900643, 4, 0, 1900644, 4, 0, 1900645, 4, 0, 1900646, 4, 0, 1900647, 4, 0, 1900648, 4, 0, 1900649, 4, 0, 1900650, 4, 0, 1900651, 4, 0, 1900657, 4, 0, 1900665, 4, 0, 1900666, 4, 0, 1900667, 4, 0, 1900674, 4, 0, 1966111, 4, 0, 1966115, 4, 0, 1966124, 4, 0, 1966130, 4, 0, 1966141, 4, 0, 1966151, 4, 0, 1966163, 4, 0, 1966173, 4, 0, 1966193, 4, 0, 1966200, 4, 0, 1966201, 4, 0, 1966202, 4, 0, 1966203, 4, 0, 1966204, 4, 0, 1966210, 4, 0, 2031647, 4, 0, 2031651, 4, 0, 2031660, 4, 0, 2031666, 4, 0, 2031677, 4, 0, 2031687, 4, 0, 2031699, 4, 0, 2031709, 4, 0, 2031729, 4, 0, 2031735, 4, 0, 2031736, 4, 0, 2031737, 4, 0, 2031738, 4, 0, 2031739, 4, 0, 2031740, 4, 0, 2031741, 4, 0, 2031746, 4, 0, 2097183, 4, 0, 2097184, 4, 0, 2097185, 4, 0, 2097186, 4, 0, 2097187, 4, 0, 2097197, 4, 0, 2097202, 4, 0, 2097213, 4, 0, 2097223, 4, 0, 2097235, 4, 0, 2097245, 4, 0, 2097265, 4, 0, 2097270, 4, 0, 2097271, 4, 0, 2097272, 4, 0, 2097273, 4, 0, 2097274, 4, 0, 2097275, 4, 0, 2097276, 4, 0, 2097277, 4, 0, 2097278, 4, 0, 2097282, 4, 0, 2162734, 4, 0, 2162738, 4, 0, 2162749, 4, 0, 2162750, 4, 0, 2162751, 4, 0, 2162752, 4, 0, 2162753, 4, 0, 2162754, 4, 0, 2162755, 4, 0, 2162756, 4, 0, 2162757, 4, 0, 2162758, 4, 0, 2162759, 4, 0, 2162771, 4, 0, 2162772, 4, 0, 2162773, 4, 0, 2162774, 4, 0, 2162775, 4, 0, 2162776, 4, 0, 2162777, 4, 0, 2162778, 4, 0, 2162779, 4, 0, 2162780, 4, 0, 2162781, 4, 0, 2162782, 4, 0, 2162783, 4, 0, 2162784, 4, 0, 2162785, 4, 0, 2162786, 4, 0, 2162787, 4, 0, 2162788, 4, 0, 2162789, 4, 0, 2162790, 4, 0, 2162791, 4, 0, 2162792, 4, 0, 2162793, 4, 0, 2162794, 4, 0, 2162795, 4, 0, 2162796, 4, 0, 2162797, 4, 0, 2162798, 4, 0, 2162799, 4, 0, 2162800, 4, 0, 2162801, 4, 0, 2162802, 4, 0, 2162803, 4, 0, 2162804, 4, 0, 2162805, 4, 0, 2162806, 4, 0, 2162807, 4, 0, 2162808, 4, 0, 2162809, 4, 0, 2162810, 4, 0, 2162811, 4, 0, 2162812, 4, 0, 2162813, 4, 0, 2162814, 4, 0, 2162815, 4, 0, 2162816, 4, 0, 2162817, 4, 0, 2162818, 4, 0, 2228271, 4, 0, 2228272, 4, 0, 2228273, 4, 0, 2228274, 4, 0 )
+
+[node name="Guides" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Guides"]
+margin_left = 394.222
+margin_top = 390.0
+margin_right = 504.222
+margin_bottom = 406.0
+custom_fonts/font = SubResource( 1 )
+text = "Spcae
+to Jump"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Guides"]
+margin_left = 568.441
+margin_top = 390.0
+margin_right = 684.441
+margin_bottom = 425.0
+custom_fonts/font = SubResource( 1 )
+text = "Space + S
+for Long Jump"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Guides"]
+margin_left = 793.354
+margin_top = 390.0
+margin_right = 966.354
+margin_bottom = 425.0
+custom_fonts/font = SubResource( 1 )
+text = "Left Click
+for change red Bricks"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Guides"]
+margin_left = 1145.53
+margin_top = 390.0
+margin_right = 1324.53
+margin_bottom = 425.0
+custom_fonts/font = SubResource( 1 )
+text = "Right Click
+for change blue Bricks"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Guides"]
+margin_left = 1824.8
+margin_top = 419.268
+margin_right = 2079.8
+margin_bottom = 435.268
+custom_fonts/font = SubResource( 1 )
+text = "You need Key to finish the Levels"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Floors" type="Node" parent="."]
+
+[node name="EmptyRed" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 1117.5, 489 )
+
+[node name="EmptyBlue" parent="Floors" instance=ExtResource( 7 )]
+position = Vector2( 1470.47, 484.225 )
+
+[node name="Keys" type="Node" parent="."]
+
+[node name="KeyRed" parent="Keys" instance=ExtResource( 10 )]
+position = Vector2( 1009.89, 510.444 )
+
+[node name="KeyBlue" parent="Keys" instance=ExtResource( 5 )]
+position = Vector2( 1362.18, 511.376 )
+
+[node name="Finish" type="Node" parent="."]
+
+[node name="Key" parent="Finish" instance=ExtResource( 1 )]
+position = Vector2( 1957.96, 453.898 )
+
+[node name="finish" parent="Finish" instance=ExtResource( 3 )]
+position = Vector2( 1684.01, 519.978 )
+
+[node name="Portals" type="Node" parent="."]
+
+[node name="Portal" parent="Portals" instance=ExtResource( 2 )]
+position = Vector2( 1525.39, 501.174 )
+
+[node name="PortalDestination" parent="Portals/Portal" instance=ExtResource( 4 )]
+position = Vector2( 317.859, 11.7725 )
+
+[node name="Portal2" parent="Portals" instance=ExtResource( 2 )]
+position = Vector2( 2061.61, 507.594 )
+
+[node name="PortalDestination" parent="Portals/Portal2" instance=ExtResource( 4 )]
+position = Vector2( -344.5, 13.8938 )

@@ -1,0 +1,97 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Levels/Qermez.png" type="Texture" id=1]
+[ext_resource path="res://Levels/Brick.png" type="Texture" id=2]
+[ext_resource path="res://Levels/Abi.png" type="Texture" id=3]
+[ext_resource path="res://Levels/RedKhali.png" type="Texture" id=4]
+[ext_resource path="res://Levels/BlueKhali.png" type="Texture" id=5]
+[ext_resource path="res://Levels/Divar.png" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[node name="PlatformTiles" type="Node2D"]
+
+[node name="BlueKhali" type="Sprite" parent="."]
+position = Vector2( 636.953, 250 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBodyBlueKhali" type="StaticBody2D" parent="BlueKhali"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlueKhali/StaticBodyBlueKhali"]
+scale = Vector2( 0.8, 0.8 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="RedKhali" type="Sprite" parent="."]
+position = Vector2( 304.667, 250 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBodyRedKhali" type="StaticBody2D" parent="RedKhali"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedKhali/StaticBodyRedKhali"]
+scale = Vector2( 0.8, 0.8 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="BlueWall" type="Sprite" parent="."]
+position = Vector2( 812.958, 245.243 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BlueWall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlueWall/StaticBody2D"]
+scale = Vector2( 0.8, 0.8 )
+shape = SubResource( 2 )
+
+[node name="RedWall" type="Sprite" parent="."]
+position = Vector2( 140.64, 250 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="RedWall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedWall/StaticBody2D2"]
+scale = Vector2( 0.8, 0.8 )
+shape = SubResource( 2 )
+
+[node name="Wall" type="Sprite" parent="."]
+position = Vector2( 462.143, 250 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBodyWall" type="StaticBody2D" parent="Wall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/StaticBodyWall"]
+scale = Vector2( 0.8, 0.8 )
+shape = SubResource( 2 )
+
+[node name="Divar" type="Sprite" parent="."]
+position = Vector2( 54.7976, 141.645 )
+
+[node name="TextureRect" type="TextureRect" parent="Divar"]
+light_mask = 2
+anchor_right = 16.0
+anchor_bottom = 16.0
+margin_right = -15.0
+margin_bottom = -15.0
+rect_min_size = Vector2( 16, 16 )
+texture = ExtResource( 6 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": true
+}

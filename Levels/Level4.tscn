@@ -1,0 +1,235 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://Levels/Tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Levels/GameState.gd" type="Script" id=4]
+[ext_resource path="res://Hazards/SpikeTop.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Items/Pad.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Levels/finish.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Items/KeyBlue.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Items/KeyRed.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Environment/EmptyRed.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Items/PortalDestination.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Items/Portal.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Environment/Red.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Environment/EmptyBlue.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Items/Key.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Environment/Blue.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Guidances/Turn.png" type="Texture" id=17]
+[ext_resource path="res://Guidances/Right.png" type="Texture" id=18]
+[ext_resource path="res://Guidances/Down.png" type="Texture" id=19]
+[ext_resource path="res://Items/Potion.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Guidances/Skeleton.png" type="Texture" id=21]
+[ext_resource path="res://Guidances/Up.png" type="Texture" id=22]
+[ext_resource path="res://Guidances/Left.png" type="Texture" id=23]
+
+[node name="Level3" type="Node2D"]
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 361.714, 450.555 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 4
+format = 1
+tile_data = PoolIntArray( 262150, 4, 0, 262151, 4, 0, 262152, 4, 0, 262153, 4, 0, 262154, 4, 0, 262155, 4, 0, 327684, 4, 0, 393220, 4, 0, 458756, 4, 0, 524292, 4, 0, 524293, 4, 0, 524294, 4, 0, 524297, 4, 0, 524298, 4, 0, 524299, 4, 0, 524313, 4, 0, 589830, 4, 0, 589833, 4, 0, 589841, 4, 0, 589842, 4, 0, 589843, 4, 0, 589844, 4, 0, 589845, 4, 0, 589846, 4, 0, 589847, 4, 0, 589849, 4, 0, 655366, 4, 0, 655369, 4, 0, 655377, 4, 0, 655385, 4, 0, 720902, 4, 0, 720905, 4, 0, 720913, 4, 0, 720921, 4, 0, 720928, 4, 0, 720929, 4, 0, 720930, 4, 0, 720931, 4, 0, 720932, 4, 0, 786438, 4, 0, 786441, 4, 0, 786449, 4, 0, 786457, 4, 0, 786463, 4, 0, 786464, 4, 0, 786468, 4, 0, 851974, 4, 0, 851977, 4, 0, 851985, 4, 0, 851993, 4, 0, 851998, 4, 0, 851999, 4, 0, 852000, 4, 0, 852004, 4, 0, 917510, 4, 0, 917511, 4, 0, 917512, 4, 0, 917513, 4, 0, 917521, 4, 0, 917529, 4, 0, 917530, 4, 0, 917533, 4, 0, 917534, 4, 0, 917535, 4, 0, 917536, 4, 0, 917537, 4, 0, 917538, 4, 0, 917539, 4, 0, 917540, 4, 0, 983049, 4, 0, 983057, 4, 0, 983065, 4, 0, 983079, 4, 0, 1048593, 4, 0, 1048601, 4, 0, 1048615, 4, 0, 1114129, 4, 0, 1114137, 4, 0, 1114138, 4, 0, 1114139, 4, 0, 1114140, 4, 0, 1114141, 4, 0, 1114142, 4, 0, 1114143, 4, 0, 1114144, 4, 0, 1114145, 4, 0, 1114146, 4, 0, 1114147, 4, 0, 1114148, 4, 0, 1114149, 4, 0, 1114150, 4, 0, 1114151, 4, 0, 1179665, 4, 0, 1179673, 4, 0, 1245201, 4, 0, 1245209, 4, 0, 1310726, 4, 0, 1310727, 4, 0, 1310728, 4, 0, 1310729, 4, 0, 1310735, 4, 0, 1310736, 4, 0, 1310737, 4, 0, 1310738, 4, 0, 1310739, 4, 0, 1310740, 4, 0, 1310741, 4, 0, 1310743, 4, 0, 1310744, 4, 0, 1310745, 4, 0, 1310746, 4, 0, 1310747, 4, 0, 1310748, 4, 0, 1310749, 4, 0, 1310750, 4, 0, 1310751, 4, 0, 1310752, 4, 0, 1310753, 4, 0, 1310754, 4, 0, 1376265, 4, 0, 1376273, 4, 0, 1376277, 4, 0, 1441801, 4, 0, 1441809, 4, 0, 1441813, 4, 0, 1507337, 4, 0, 1507345, 4, 0, 1507349, 4, 0, 1572873, 4, 0, 1572876, 4, 0, 1572877, 4, 0, 1572878, 4, 0, 1572879, 4, 0, 1572880, 4, 0, 1572881, 4, 0, 1572885, 4, 0, 1638409, 4, 0, 1638412, 4, 0, 1638417, 4, 0, 1638421, 4, 0, 1703945, 4, 0, 1703948, 4, 0, 1703950, 4, 0, 1703951, 4, 0, 1703952, 4, 0, 1703953, 4, 0, 1703957, 4, 0, 1769481, 4, 0, 1769484, 4, 0, 1769493, 4, 0, 1769501, 4, 0, 1769502, 536870916, 0, 1769503, 4, 0, 1835017, 4, 0, 1835020, 4, 0, 1835021, 4, 0, 1835022, 4, 0, 1835023, 4, 0, 1835024, 4, 0, 1835025, 4, 0, 1835029, 4, 0, 1835032, 536870916, 0, 1835038, 536870916, 0, 1900553, 4, 0, 1900554, 4, 0, 1900555, 4, 0, 1900556, 4, 0, 1900561, 536870916, 0, 1900562, 536870916, 0, 1900563, 536870916, 0, 1900564, 536870916, 0, 1900565, 536870916, 0, 1900566, 536870916, 0, 1900567, 536870916, 0, 1900568, 536870916, 0, 1900574, 536870916, 0, 1966110, 536870916, 0, 2031643, 536870916, 0, 2031644, 536870916, 0, 2031645, 536870916, 0, 2031646, 536870916, 0 )
+
+[node name="GUI" parent="." instance=ExtResource( 3 )]
+
+[node name="Hazard" type="Node" parent="."]
+
+[node name="SpikeTop" parent="Hazard" instance=ExtResource( 5 )]
+position = Vector2( 472.557, 487.71 )
+
+[node name="SpikeTop2" parent="Hazard" instance=ExtResource( 5 )]
+position = Vector2( 458.414, 487.71 )
+
+[node name="SpikeTop3" parent="Hazard" instance=ExtResource( 5 )]
+position = Vector2( 443.919, 487.71 )
+
+[node name="SpikeTop4" parent="Hazard" instance=ExtResource( 5 )]
+position = Vector2( 250.498, 376.054 )
+
+[node name="SpikeTop5" parent="Hazard" instance=ExtResource( 5 )]
+position = Vector2( 236.54, 376.054 )
+
+[node name="SpikeTop6" parent="Hazard" instance=ExtResource( 5 )]
+position = Vector2( 222.649, 376.054 )
+
+[node name="SpikeTop7" parent="Hazard" instance=ExtResource( 5 )]
+position = Vector2( 104, 120 )
+
+[node name="Pads" type="Node" parent="."]
+
+[node name="Pad" parent="Pads" instance=ExtResource( 6 )]
+position = Vector2( 320.986, 455.947 )
+
+[node name="Pad2" parent="Pads" instance=ExtResource( 6 )]
+position = Vector2( 128.786, 215.666 )
+
+[node name="Keys" type="Node" parent="."]
+
+[node name="KeyRed" parent="Keys" instance=ExtResource( 9 )]
+position = Vector2( 149.369, 307.652 )
+
+[node name="KeyBlue" parent="Keys" instance=ExtResource( 8 )]
+position = Vector2( 340.226, 285.227 )
+
+[node name="Finish" type="Node" parent="."]
+
+[node name="finish" parent="Finish" instance=ExtResource( 7 )]
+position = Vector2( 320.507, 354.398 )
+
+[node name="Key" parent="Finish" instance=ExtResource( 15 )]
+position = Vector2( 216.284, 423.439 )
+
+[node name="Floors" type="Node" parent="."]
+
+[node name="EmptyRed" parent="Floors" instance=ExtResource( 10 )]
+position = Vector2( 415.52, 546.433 )
+
+[node name="EmptyRed2" parent="Floors" instance=ExtResource( 10 )]
+position = Vector2( 74.5201, 396.433 )
+
+[node name="Red" parent="Floors" instance=ExtResource( 13 )]
+position = Vector2( 231.704, 328 )
+
+[node name="Red4" parent="Floors" instance=ExtResource( 13 )]
+position = Vector2( 88, 328 )
+
+[node name="Red5" parent="Floors" instance=ExtResource( 13 )]
+position = Vector2( 72, 328 )
+
+[node name="Red3" parent="Floors" instance=ExtResource( 13 )]
+position = Vector2( 526.289, 505.736 )
+
+[node name="Red2" parent="Floors" instance=ExtResource( 13 )]
+position = Vector2( 215.413, 328 )
+
+[node name="EmptyBlue" parent="Floors" instance=ExtResource( 14 )]
+position = Vector2( 263.853, 272.976 )
+
+[node name="Blue" parent="Floors" instance=ExtResource( 16 )]
+position = Vector2( 168, 388.553 )
+
+[node name="Blue5" parent="Floors" instance=ExtResource( 16 )]
+position = Vector2( 72.7349, 72.2239 )
+
+[node name="Blue2" parent="Floors" instance=ExtResource( 16 )]
+position = Vector2( 184, 388.553 )
+
+[node name="Blue4" parent="Floors" instance=ExtResource( 16 )]
+position = Vector2( 360, 328 )
+
+[node name="Blue3" parent="Floors" instance=ExtResource( 16 )]
+position = Vector2( 280, 440 )
+
+[node name="Portals" type="Node" parent="."]
+
+[node name="Portal" parent="Portals" instance=ExtResource( 12 )]
+modulate = Color( 0.0352941, 1, 1, 1 )
+position = Vector2( 487.118, 529.774 )
+
+[node name="PortalDestination" parent="Portals/Portal" instance=ExtResource( 11 )]
+modulate = Color( 0.0352941, 1, 1, 1 )
+position = Vector2( -219.566, -214.8 )
+
+[node name="Portal3" parent="Portals" instance=ExtResource( 12 )]
+modulate = Color( 1, 0.341176, 0.14902, 1 )
+position = Vector2( 371.431, 513.47 )
+
+[node name="PortalDestination" parent="Portals/Portal3" instance=ExtResource( 11 )]
+modulate = Color( 1, 0.341176, 0.14902, 1 )
+position = Vector2( 58.1422, -254.668 )
+
+[node name="Portal2" parent="Portals" instance=ExtResource( 12 )]
+modulate = Color( 0.45098, 0.290196, 0.482353, 1 )
+position = Vector2( 122.707, 354.91 )
+
+[node name="PortalDestination" parent="Portals/Portal2" instance=ExtResource( 11 )]
+modulate = Color( 0.45098, 0.290196, 0.482353, 1 )
+position = Vector2( 6.46851, -156.806 )
+
+[node name="Portal4" parent="Portals" instance=ExtResource( 12 )]
+modulate = Color( 0.14902, 0.678431, 0.380392, 1 )
+position = Vector2( 493.305, 255.628 )
+
+[node name="PortalDestination" parent="Portals/Portal4" instance=ExtResource( 11 )]
+modulate = Color( 0.14902, 0.678431, 0.380392, 1 )
+position = Vector2( -227.897, 110.885 )
+
+[node name="Portal5" parent="Portals" instance=ExtResource( 12 )]
+modulate = Color( 0.964706, 0.631373, 0.2, 1 )
+position = Vector2( 534.937, 255.622 )
+
+[node name="PortalDestination" parent="Portals/Portal5" instance=ExtResource( 11 )]
+modulate = Color( 0.964706, 0.631373, 0.2, 1 )
+position = Vector2( -268.875, 151.374 )
+
+[node name="Portal6" parent="Portals" instance=ExtResource( 12 )]
+modulate = Color( 0.478431, 0.796078, 0.431373, 1 )
+position = Vector2( 565.948, 207.655 )
+
+[node name="PortalDestination" parent="Portals/Portal6" instance=ExtResource( 11 )]
+modulate = Color( 0.478431, 0.796078, 0.431373, 1 )
+position = Vector2( -390.241, 196.372 )
+
+[node name="Portal7" parent="Portals" instance=ExtResource( 12 )]
+modulate = Color( 0.0627451, 0.207843, 0.117647, 1 )
+position = Vector2( 176.93, 444.974 )
+
+[node name="PortalDestination" parent="Portals/Portal7" instance=ExtResource( 11 )]
+modulate = Color( 0.0627451, 0.207843, 0.117647, 1 )
+position = Vector2( 183.287, -12.7136 )
+
+[node name="Portal8" parent="Portals" instance=ExtResource( 12 )]
+position = Vector2( 53, 187 )
+
+[node name="PortalDestination" parent="Portals/Portal8" instance=ExtResource( 11 )]
+position = Vector2( 481.375, 12.375 )
+
+[node name="Portal9" parent="Portals" instance=ExtResource( 12 )]
+modulate = Color( 0.282353, 0.654902, 0, 1 )
+position = Vector2( 408.62, 104.206 )
+
+[node name="PortalDestination" parent="Portals/Portal9" instance=ExtResource( 11 )]
+modulate = Color( 0.282353, 0.654902, 0, 1 )
+position = Vector2( -46.0997, 319.716 )
+
+[node name="Guides" type="Node" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Guides"]
+position = Vector2( 215.808, 88.4986 )
+texture = ExtResource( 18 )
+
+[node name="Sprite3" type="Sprite" parent="Guides"]
+position = Vector2( 391.94, 152.121 )
+texture = ExtResource( 19 )
+
+[node name="Sprite5" type="Sprite" parent="Guides"]
+position = Vector2( 440.159, 232.002 )
+texture = ExtResource( 22 )
+
+[node name="Sprite6" type="Sprite" parent="Guides"]
+position = Vector2( 553.787, 263.432 )
+texture = ExtResource( 23 )
+
+[node name="Sprite4" type="Sprite" parent="Guides"]
+position = Vector2( 474.746, 265.888 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 21 )
+
+[node name="Sprite2" type="Sprite" parent="Guides"]
+position = Vector2( 520.124, 424.448 )
+texture = ExtResource( 17 )
+
+[node name="Potions" type="Node" parent="."]
+
+[node name="Potion" parent="Potions" instance=ExtResource( 20 )]
+position = Vector2( 534.674, 215.777 )

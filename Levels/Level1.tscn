@@ -1,0 +1,106 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Levels/Tiles.tres" type="TileSet" id=3]
+[ext_resource path="res://Environment/Red.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Environment/EmptyRed.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Items/KeyRed.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Environment/EmptyBlue.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Items/Key.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Items/KeyBlue.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Levels/finish.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Items/Portal.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Items/PortalDestination.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Items/Pad.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Environment/Blue.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Guidances/Down.png" type="Texture" id=15]
+[ext_resource path="res://Levels/GameState.gd" type="Script" id=16]
+
+[node name="Level4" type="Node2D"]
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -40.433, -8.32445 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 4
+format = 1
+tile_data = PoolIntArray( 196630, 4, 0, 262166, 4, 0, 393253, 4, 0, 458774, 4, 0, 458789, 4, 0, 458805, 4, 0, 524310, 4, 0, 524312, 4, 0, 524313, 4, 0, 524314, 4, 0, 524315, 4, 0, 524316, 4, 0, 524317, 4, 0, 524318, 4, 0, 524325, 4, 0, 524338, 4, 0, 524339, 4, 0, 524340, 4, 0, 524341, 4, 0, 589851, 4, 0, 589861, 4, 0, 655387, 4, 0, 655397, 4, 0, 655398, 4, 0, 655399, 4, 0, 655400, 4, 0, 655401, 4, 0, 655402, 4, 0, 655403, 4, 0, 720923, 4, 0, 720933, 4, 0, 786454, 4, 0, 786455, 4, 0, 786456, 4, 0, 786457, 4, 0, 786458, 4, 0, 786459, 4, 0, 786469, 4, 0, 851994, 4, 0, 917525, 4, 0, 917526, 4, 0, 917527, 4, 0, 917530, 4, 0, 983064, 4, 0, 983066, 4, 0, 1048602, 4, 0, 1114138, 4, 0, 1179674, 4, 0, 1245210, 4, 0, 1310746, 4, 0, 1376281, 4, 0, 1376282, 4, 0, 1441818, 4, 0, 1507354, 4, 0, 1572887, 4, 0, 1572890, 4, 0, 1638426, 4, 0, 1703962, 4, 0, 1703965, 4, 0, 1703966, 4, 0, 1703967, 4, 0, 1769496, 4, 0, 1966105, 4, 0, 1966107, 4, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 347.33, 111.394 )
+
+[node name="Hazard" type="Node" parent="."]
+
+[node name="Keys" type="Node" parent="."]
+
+[node name="KeyRed" parent="Keys" instance=ExtResource( 6 )]
+position = Vector2( 489.52, 89.7251 )
+
+[node name="KeyBlue" parent="Keys" instance=ExtResource( 9 )]
+position = Vector2( 360.913, 162.569 )
+
+[node name="Floors" type="Node" parent="."]
+
+[node name="EmptyRed" parent="Floors" instance=ExtResource( 5 )]
+position = Vector2( 509.969, 166.97 )
+
+[node name="EmptyRed3" parent="Floors" instance=ExtResource( 5 )]
+position = Vector2( 459.728, 283.513 )
+
+[node name="EmptyRed2" parent="Floors" instance=ExtResource( 5 )]
+position = Vector2( 525.946, 166.97 )
+
+[node name="EmptyRed4" parent="Floors" instance=ExtResource( 5 )]
+position = Vector2( 353.253, 73.7372 )
+
+[node name="Red" parent="Floors" instance=ExtResource( 4 )]
+position = Vector2( 510.11, 258.014 )
+
+[node name="Red2" parent="Floors" instance=ExtResource( 4 )]
+position = Vector2( 526.087, 258.014 )
+
+[node name="EmptyBlue" parent="Floors" instance=ExtResource( 7 )]
+position = Vector2( 698.11, 123.77 )
+
+[node name="Blue" parent="Floors" instance=ExtResource( 14 )]
+position = Vector2( 335.5, 135 )
+
+[node name="Blue2" parent="Floors" instance=ExtResource( 14 )]
+position = Vector2( 319.477, 79.6843 )
+
+[node name="Blue3" parent="Floors" instance=ExtResource( 14 )]
+position = Vector2( 319.477, 95.6613 )
+
+[node name="Finish" type="Node" parent="."]
+
+[node name="finish" parent="Finish" instance=ExtResource( 10 )]
+position = Vector2( 581.301, 143.046 )
+
+[node name="Key" parent="Finish" instance=ExtResource( 8 )]
+position = Vector2( 319.254, 31.0751 )
+
+[node name="Pads" type="Node" parent="."]
+
+[node name="Pad" parent="Pads" instance=ExtResource( 13 )]
+position = Vector2( 367.973, 318.971 )
+
+[node name="GUI" parent="." instance=ExtResource( 2 )]
+
+[node name="Guides" type="Node" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Guides"]
+position = Vector2( 443.768, 334.322 )
+texture = ExtResource( 15 )
+
+[node name="Portals" type="Node" parent="."]
+
+[node name="Portal" parent="Portals" instance=ExtResource( 11 )]
+position = Vector2( 296.869, 77.2344 )
+
+[node name="PortalDestination" parent="Portals/Portal" instance=ExtResource( 12 )]
+position = Vector2( 488.409, 36.6171 )
